@@ -199,16 +199,26 @@ def multiplicar_matrices(matriz_a: list[list], matriz_b: list[list]) -> list[lis
     return matriz_resultante
 #cargar_matriz_aleatoriamente(matriz_a)
 
+#Matrices de ejemplos
 matriz_1 = [
-    [2,3],
+    [5,3],
     [-2,9],
-    [6,-4],
+    [7,-4],
 ]
 matriz_2 = [
     [-2,8,5,3],
     [5,-6,7,-7],
-
 ]
-#suma_matrices(matriz_1, matriz_2)
-#multiplicar_matrices_por_escalar(matriz_1, 3)
-multiplicar_matrices(matriz_1, matriz_2)
+
+#multiplicar_matrices(matriz_1, matriz_2)
+
+#--- Shortcut de función para crear matrices personalizadas y multiplicarlas: --- 
+    #Elegir cantidad de filas y columnas de c/ matriz
+matriz_a = inicializar_matriz(4, 4, 0)
+matriz_b = inicializar_matriz(4, 4, 0)
+
+    #Cargar los datos de las mismas:
+carga_matriz_secuencialmente(matriz_a)
+carga_matriz_secuencialmente(matriz_b)
+    #Enviar por parámetro las mismas funciones para multiplicar
+multiplicar_matrices(matriz_a, matriz_b)
